@@ -4,6 +4,7 @@ import Homebody from '../components/navbar/homebody'
 import ShoppingCart from '../components/shoppingcart/cart'
 import { Allbooks } from '../components/books'
 import PaymentPage from '../components/shoppingcart/checkout'
+import Login from '../components/login/login'
 
 export const Allroute = () => {
   return (
@@ -13,6 +14,7 @@ export const Allroute = () => {
             <Route path='/cart' element={<ShoppingCart/>}/>
             <Route path='/books' element={<Allbooks/>}/>
             <Route path='/payment' element={<PaymentPage/>}/>
+            <Route path='/login' element={<Login/>}/>
             <Route/>
         </Routes>
     </div>

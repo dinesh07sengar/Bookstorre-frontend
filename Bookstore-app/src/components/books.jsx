@@ -68,9 +68,10 @@ export const Allbooks = () => {
         <Box >
                
             <Box >
-                <Box mr={"30%"} ml={"30%"}>
-                    <Input placeholder='search your fav movie' onChange={handleinput}/>
-                    <Button onClick={handlesearch}>Search</Button>
+                <Box mr={"30%"} ml={"30%"} mb={"3%"}>
+                    <Flex>
+                    <Input placeholder='search your fav book' onChange={handleinput}/>
+                    <Button onClick={handlesearch}>Search</Button></Flex>
                 </Box>
            
                 <Flex ml={"5%"} gap={"2%"} mr={"5%"} w={"88%"}>
@@ -83,8 +84,8 @@ export const Allbooks = () => {
                     <Box mb={"10px"} w={"50%"}>
                         <Select bg={"white"}>
                             <option value={""}>filter by language</option>
-                            <option value={"Asia"}>Bengali</option>
-                            <option value={"Africa"}>Marathi</option>
+                            <option value={"Bengali"}>Bengali</option>
+                            <option value={"Marathi"}>Marathi</option>
                             <option value={"Americas"}>America</option>
                             <option value={"Antarctic"}>Antartic</option>
                             <option value={"Europe"}>Europe</option>

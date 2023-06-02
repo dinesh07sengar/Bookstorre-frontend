@@ -53,7 +53,7 @@ const LoginFail=()=>{
 export const ActionCalls = (data,method) => {
     return function (dispatch) {
         const Getbooks = (dispatch) => {
-            axios.get("http://localhost:4900/books")
+            axios.get("https://sapphire-goldfish-vest.cyclic.app/books")
                 .then((d) => {
                     console.log(d)
                     dispatch(BookSuccess(d.data))
@@ -65,25 +65,25 @@ export const ActionCalls = (data,method) => {
 
         }
          const Registeration = (dispatch,data) => {
-             axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key=ce0659c825d9b20b83594dba4f3043c8&language=en-US&page=1")
+             axios.get("https://sapphire-goldfish-vest.cyclic.app/user/register")
                  .then((d) => {
                      console.log(d)
                      dispatch(Registeration_Successfull(d))
                  })
                  .catch((er) => {
                     dispatch(Registeration_Fail())
-                     console.log("error in Top Movies" + er)
+                     console.log("er" + er)
                  })
          }
         const Login = (dispatch,data) => {
-            axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=ce0659c825d9b20b83594dba4f3043c8&language=en-US&page=1")
+            axios.get("https://sapphire-goldfish-vest.cyclic.app/user/login")
                 .then((d) => {
                     console.log(d)
                     dispatch(Loginsuccesfull(d))
                 })
                 .catch((er) => {
                     dispatch(LoginFail())
-                    console.log("error in Upcoming Movies " + er)
+                    console.log("error in post " + er)
                 })
         }
        
